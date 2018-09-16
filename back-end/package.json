@@ -1,0 +1,21 @@
+{
+  "name": "back-end",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "PORT=3000 node ."
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.2",
+    "koa": "^2.5.3",
+    "koa-body": "^4.0.4",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "tiny-date-format": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.31"
+  }
+}
