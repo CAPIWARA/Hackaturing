@@ -1,28 +1,50 @@
 <template>
   <section class="check-container">
-    <v-card class="card">
-      
-      <div class="check-count">
-        <span class="current">{{ current }}</span>
-        <span class="quantity"> / {{ receipts.length }}</span>
-      </div>
+    <check-card
+      v-if="transaction"
+      class="card"
+      :reviews="reviews"
+      :transaction="transaction"
 
+      :current="quantity.current"
+      :quantity="quantity.quantity"
 
-    </v-card>
+      @change-review="onReviewChange"
+    />
   </section>
 </template>
 
 <script>
-  import VCard from '@/components/VCard';
+  import CheckCard from '@/components/CheckCard';
+  import {
+    getCurrent,
+    getQuantity,
+    sendReviews,
+  } from '@/services/transactions';
 
   export default {
-    components: { VCard },
+    components: { CheckCard },
     data () {
       return {
-        current: 0,
-        receipts: [],
+        quantity: {
+          current: 0,
+          quantity: 0
+        },
+        transaction: null,
+        reviews: {
+          0: 'CHECKED',
+        },
       };
     },
+    methods: {
+      onReviewChange (review, index) {
+        this.reviews = { ...this.reviews, [index]: review };
+      }
+    },
+    async mounted () {
+      this.transaction = await getCurrent();
+      this.quantity = await getQuantity();
+    }
   };
 </script>
 
@@ -35,5 +57,5 @@
 
     > .card
       width: 980px
-      height: 100vh
+      height: calc(100vh - 100px)
 </style>

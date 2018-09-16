@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Cirurgia cardiaca",
+    "provider": "Hospital São Camilo",
+    "type": "Internação",
+    "date": "Setembro / 2018",
+    "category": "Eletivo",
+    "patient": "#18092",
+    "gender": "Masculino",
+    "birthday": "1991-04-09",
+    "items": [
+      {
+        "name": "Custo do ar condicionado",
+        "price": 5.8,
+        "isAbove": false,
+        "quantity": 1
+      },
+      {
+        "name": "Tesoura",
+        "price": 12.59,
+        "isAbove": false,
+        "quantity": 2
+      },
+      {
+        "name": "Consulta",
+        "price": 298.59,
+        "isAbove": false,
+        "quantity": 1
+      },
+      {
+        "name": "Pacote com 50 algodões",
+        "price": 50.49,
+        "isAbove": true,
+        "quantity": 4
+      }
+    ]
+  }
+]
