@@ -1,4 +1,4 @@
-# front-end
+# Hackaturing Front-End
 
 ## Project setup
 ```
