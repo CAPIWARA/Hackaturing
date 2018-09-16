@@ -1,5 +1,8 @@
 <template>
-  <button :class="[ 'v-cancel', '-' + size.toLowerCase() ]">
+  <button
+    :class="[ 'v-cancel', '-' + size.toLowerCase() ]"
+    @click="$emit('click', $event)"
+  >
     <img class="icon" src="@/assets/icons/Cancel.svg" alt="Rejeitar" />
   </button>
 </template>

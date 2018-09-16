@@ -1,5 +1,8 @@
 <template>
-  <button :class="[ 'v-check', '-' + size.toLowerCase() ]">
+  <button
+    :class="[ 'v-check', '-' + size.toLowerCase() ]"
+    @click="$emit('click', $event)"
+  >
     <img class="icon" src="@/assets/icons/Check.svg" alt="Confirmar" />
   </button>
 </template>
