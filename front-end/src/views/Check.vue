@@ -33,6 +33,8 @@
         transaction: null,
         reviews: {
           0: 'CHECKED',
+          2: 'CHECKED',
+          3: 'REJECTED'
         },
       };
     },

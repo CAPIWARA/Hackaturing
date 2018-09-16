@@ -34,6 +34,13 @@
       <span class="quantity"> / {{ quantity }}</span>
     </p>
 
+    <div style="display: flex; width: 100%">
+      <p style="font-weight: 700">Items</p>
+
+      <p style="margin-left: auto;font-weight: 700">Custos</p>
+      <p style="width: 130px">&nbsp;</p>
+    </div>
+
     <div
       v-for="(item, index) in transaction.items"
       :key="index"
@@ -48,6 +55,8 @@
         @change="$emit('change-review', $event, index)"
       />
     </div>
+
+    <div style="height: 50px"></div>
 
     <button class="button">
       <span class="text">Próximo</span>
@@ -107,6 +116,7 @@
       border-top:  1px solid rgba(#000, .25)
 
     > .button
+      margin-top: 50px
       display: flex
       align-items: center
       background-color: transparent
