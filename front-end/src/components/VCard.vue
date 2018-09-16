@@ -1,5 +1,7 @@
 <template>
-  <div class="v-card" />
+  <div class="v-card">
+    <slot />
+  </div>
 </template>
 
 <style lang="stylus">

@@ -1,7 +1,5 @@
 <template>
-  <v-screen>
-    <router-view />
-  </v-screen>
+  <router-view />
 </template>
 
 <style lang="stylus">
@@ -11,4 +9,8 @@
 
   body
     margin: 0
+    font-family: 'Muli', sans-serif
+
+  *
+    box-sizing: border-box
 </style>
